@@ -59,7 +59,7 @@ end
 
 	-- 2번 효과
 function s.nsconfilter(c,tp)
-	return c:IsControler(tp) and c:IsSetCard(0xe3) and not c:IsReason(REASON_DRAW)
+	return c:IsControler(tp) and c:IsSetCard(0xe3) and c:IsMonster() and not c:IsReason(REASON_DRAW)
 end
 function s.filter0(c)
 	return c:IsCode(15610297) and c:IsFaceup()
