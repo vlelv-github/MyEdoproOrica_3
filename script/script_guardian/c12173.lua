@@ -43,6 +43,8 @@ s.listed_names = {34022290}
     -- "가디언"의 테마명이 쓰여짐
 s.listed_series = {0x52}
 function s.atktg(e,c)
+	-- "가디언 에아토스"는 기본적으로 두 배
+	if c:IsCode(34022290) then return true end
 	-- 몬스터에 장착되어 있는 카드중에서, 자신에게 카드명이 쓰여진 카드를 장착하고 있는지 확인
 	local equip_cards = c:GetEquipGroup()
 	if not equip_cards or #equip_cards == 0 then return false end
